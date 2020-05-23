@@ -1,0 +1,61 @@
+package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+
+@Autonomous(name = "ABHAANSHULTOUCHSENSOR (Blocks to Java)", group = "")
+public class ABHAANSHULTOUCHSENSOR extends LinearOpMode {
+
+  private DcMotor RL_Motor;
+  private DcMotor RR_Motor;
+
+  /**
+   * This function is executed when this Op Mode is selected from the Driver Station.
+   */
+  @Override
+  public void runOpMode() {
+    RL_Motor = hardwareMap.dcMotor.get("RL_Motor");
+    RR_Motor = hardwareMap.dcMotor.get("RR_Motor");
+
+    // Put initialization blocks here.
+    RL_Motor.setDirection(DcMotorSimple.Direction.REVERSE);
+    waitForStart();
+    // Put run blocks here.
+    RL_Motor.setPower(1);
+    RR_Motor.setPower(1);
+    sleep(1000);
+    if (opModeIsActive()) {
+      RL_Motor.setPower(-1);
+      RR_Motor.setPower(-1);
+      sleep(1000);
+      RL_Motor.setPower(-1);
+      RR_Motor.setPower(1);
+      sleep(1000);
+      RL_Motor.setPower(1);
+      RR_Motor.setPower(1);
+      sleep(1000);
+      RL_Motor.setPower(0);
+      RR_Motor.setPower(0);
+    }
+  }
+}
+
+
+LinearOpMode
+Gamepad
+Actuators
+Sensors
+Other Devices
+Android
+Utilities
+Logic
+Loops
+Math
+Text
+Lists
+Variables
+Functions
+Miscellaneous
+Direction.REVERSE ▾111000callABHAANSHULTOUCHSENSOR.opModeIsActive-1-11000-11100011100000setPower ▾RL_Motor ▾toRR_Motor ▾tocallABHAANSHULTOUCHSENSOR.sleepmillisecondssetPower ▾RL_Motor ▾toRR_Motor ▾tocallABHAANSHULTOUCHSENSOR.sleepmillisecondssetPower ▾RL_Motor ▾toRR_Motor ▾tocallABHAANSHULTOUCHSENSOR.sleepmillisecondssetPower ▾RL_Motor ▾toRR_Motor ▾toifdocallABHAANSHULTOUCHSENSOR.sleepmillisecondssetPower ▾RL_Motor ▾toRR_Motor ▾toPut run blocks here.callABHAANSHULTOUCHSENSOR.waitForStartsetRL_Motor ▾.Direction ▾toPut initialization blocks here.torunOpMode This function is executed when this Op Mode is selected from the Driver Station.
